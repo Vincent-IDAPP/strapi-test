@@ -4,12 +4,7 @@ type: "nodejs:16"  # Utilisation de Node.js version 16
 disk: 2048         # Quantité d'espace disque allouée en MB
 
 build:
- type: node
- commands:
-  install: |
-   curl -o- -L https://yarnpkg.com/install.sh | bash
-   export PATH="$HOME/.yarn/bin:$PATH"
-   yarn install
+    yarn build
 
 dependencies:
     nodejs:
