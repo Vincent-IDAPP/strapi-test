@@ -1,5 +1,7 @@
 "https://{default}/":
   type: upstream
-  upstream: "strapi:http"
-  cache:
-    enabled: false
+  upstream: "app:http"
+
+"https://{default}/":
+  type: redirect
+  to: "https://www.{default}/"
