@@ -4,11 +4,6 @@ type: "nodejs:14"  # Utilisation de Node.js version 16
 
 build:
     flavor: "nodejs"
-    commands:
-    - curl -o- -L https://yarnpkg.com/install.sh | bash
-    - export PATH="$HOME/.yarn/bin:$PATH"
-    - yarn install
-    - yarn build
 
 dependencies:
     nodejs:
@@ -18,7 +13,6 @@ mounts:
     '/srv/app': 'shared:files'  # Garde les fichiers persistants dans le dossier app
 
 web:
-    type: "http"
     commands:
         start: yarn start
     #locations:
