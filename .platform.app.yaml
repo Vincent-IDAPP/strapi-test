@@ -4,6 +4,7 @@ type: "nodejs:16"  # Utilisation de Node.js version 16
 disk: 2048         # Quantité d'espace disque allouée en MB
 
 build:
+    yarn install
     flavor: none  # Désactive la phase de build Node.js spécifique
 
 dependencies:
