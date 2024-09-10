@@ -28,7 +28,7 @@ web:
             allow: true
 
 hooks:
-    build:
+    build: |
         yarn install
 
 relationships:
