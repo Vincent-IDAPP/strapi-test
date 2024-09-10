@@ -36,8 +36,9 @@ relationships:
     cache: "redis:cache"       # Relation avec Redis pour la gestion du cache
 
 variables:
-    NODE_ENV: "production"
-    APP_KEYS: ${APP_KEYS}
-    ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
-    JWT_SECRET: ${JWT_SECRET}
-    API_TOKEN_SALT: ${API_TOKEN_SALT}
+    env:
+        NODE_ENV: "production"
+        APP_KEYS: ${APP_KEYS}
+        ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+        JWT_SECRET: ${JWT_SECRET}
+        API_TOKEN_SALT: ${API_TOKEN_SALT}
