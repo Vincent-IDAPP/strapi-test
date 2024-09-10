@@ -5,6 +5,11 @@ disk: 2048         # Quantité d'espace disque allouée en MB
 
 build:
     flavor: none  # Désactive la phase de build Node.js spécifique
+    commands:
+        install: |
+            curl -o- -L https://yarnpkg.com/install.sh | bash
+            export PATH="$HOME/.yarn/bin:$PATH"
+            yarn install
 
 dependencies:
     nodejs:
