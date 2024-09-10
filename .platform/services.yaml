@@ -5,4 +5,4 @@ postgresql:
 
 # Redis configuration
 cache:
-  type: "redis:5"
+  type: "redis:6"
