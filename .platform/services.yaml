@@ -1,0 +1,8 @@
+# PostgreSQL configuration
+dbpostgresql:
+  type: "postgresql:13"
+  disk: 512
+
+# Redis configuration
+cache:
+  type: "redis:6"

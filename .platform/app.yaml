@@ -1,0 +1,43 @@
+name: strapi
+
+type: "nodejs:16"  # Utilisation de Node.js version 16
+disk: 2048         # Quantité d'espace disque allouée en MB
+
+build:
+    flavor: none  # Désactive la phase de build Node.js spécifique
+
+dependencies:
+    nodejs:
+        "@strapi/strapi": "^4.0.0"
+
+mounts:
+    '/srv/app': 'shared:files'  # Garde les fichiers persistants dans le dossier app
+
+web:
+    commands:
+        start: yarn start
+    locations:
+        "/":
+            root: "public"
+            passthru: true
+        "/admin":
+            root: "public"
+            passthru: true
+        "/uploads":
+            root: "public"
+            allow: true
+
+hooks:
+    build: |
+        yarn install
+
+relationships:
+    database: "postgresql:db"  # Relation avec la base de données PostgreSQL
+    cache: "redis:cache"       # Relation avec Redis pour la gestion du cache
+
+variables:
+    NODE_ENV: "production"
+    APP_KEYS: ${APP_KEYS}
+    ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+    JWT_SECRET: ${JWT_SECRET}
+    API_TOKEN_SALT: ${API_TOKEN_SALT}
