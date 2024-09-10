@@ -4,5 +4,5 @@ postgresql:
   disk: 512
 
 # Redis configuration
-cache:
-  type: "redis:6"
+#cache:
+#  type: "redis:6"

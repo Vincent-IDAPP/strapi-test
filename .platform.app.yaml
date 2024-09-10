@@ -33,7 +33,7 @@ hooks:
 
 relationships:
     database: "postgresql:postgresql"  # Relation avec la base de données PostgreSQL
-    cache: "redis:redis"       # Relation avec Redis pour la gestion du cache
+    # cache: "cache:redis"       # Relation avec Redis pour la gestion du cache
 
 variables:
     env:
