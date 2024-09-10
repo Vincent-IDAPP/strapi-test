@@ -4,7 +4,7 @@ type: "nodejs:16"  # Utilisation de Node.js version 16
 disk: 2048
 
 build:
-    flavor: "nodejs"
+    flavor: "none"
 
 dependencies:
     nodejs:
@@ -15,7 +15,7 @@ mounts:
 
 web:
     commands:
-        start: yarn start
+        start: npm start
     #locations:
     #    "/":
     #        root: "public"
@@ -29,7 +29,7 @@ web:
 
 hooks:
     build:
-        yarn install
+        npm install
 
 relationships:
     database: "postgresql:postgresql"  # Relation avec la base de données PostgreSQL
