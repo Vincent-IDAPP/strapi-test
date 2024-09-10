@@ -1,7 +1,6 @@
 name: strapi
 
 type: "nodejs:16"  # Utilisation de Node.js version 16
-disk: 2048         # Quantité d'espace disque allouée en MB
 
 build:
   commands:
@@ -20,16 +19,16 @@ mounts:
 web:
     commands:
         start: yarn start
-    locations:
-        "/":
-            root: "public"
-            passthru: true
-        "/admin":
-            root: "public"
-            passthru: true
-        "/uploads":
-            root: "public"
-            allow: true
+    #locations:
+    #    "/":
+    #        root: "public"
+    #        passthru: true
+    #    "/admin":
+    #        root: "public"
+    #        passthru: true
+    #    "/uploads":
+    #        root: "public"
+    #        allow: true
 
 hooks:
     build: |
