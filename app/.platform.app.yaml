@@ -1,6 +1,6 @@
 name: strapi
 
-type: "nodejs:16"  # Utilisation de Node.js version 16
+type: "nodejs:18"  # Utilisation de Node.js version 16
 disk: 2048
 
 build:
