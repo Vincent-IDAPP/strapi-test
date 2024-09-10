@@ -1,3 +1,5 @@
 "https://{default}/":
   type: upstream
-  upstream: "app:http"
+  upstream: "strapi:http"
+  cache:
+    enabled: true
