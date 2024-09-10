@@ -32,7 +32,7 @@ hooks:
         yarn install
 
 relationships:
-    database: "postgresql:db"  # Relation avec la base de données PostgreSQL
+    database: "postgresql:postgresql"  # Relation avec la base de données PostgreSQL
     cache: "redis:cache"       # Relation avec Redis pour la gestion du cache
 
 variables:

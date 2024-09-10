@@ -1,5 +1,5 @@
 # PostgreSQL configuration
-dbpostgresql:
+postgresql:
   type: "postgresql:13"
   disk: 512
 
