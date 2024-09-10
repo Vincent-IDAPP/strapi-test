@@ -4,7 +4,6 @@ type: "nodejs:16"  # Utilisation de Node.js version 16
 disk: 2048         # Quantité d'espace disque allouée en MB
 
 build:
-  type: node
   commands:
     install: yarn install
     build: yarn build
