@@ -1,6 +1,7 @@
 name: strapi
 
 type: "nodejs:14"  # Utilisation de Node.js version 16
+disk: 2048
 
 build:
     flavor: "nodejs"
